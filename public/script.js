@@ -1,4 +1,5 @@
-const apiURL = "/api/euromilhoes/";
+// const apiURL = 'http://localhost:3000/'
+const apiURL = "/";
 
 window.addEventListener('load', function() {
     atualizarChave();
@@ -15,7 +16,7 @@ function atualizarChave() {
 }
 
 async function getEuromilhoesKey() {
-    let response = await fetch(apiURL + "generate-key");
+    let response = await fetch(apiURL + "generateKey");
     let json = await response.json();
     return json;
 }
